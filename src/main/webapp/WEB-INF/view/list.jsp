@@ -18,10 +18,9 @@
 		<c:forEach var="writeCommand" items="${writeList.writeCommands}">
 			<tr>
 				<td>${writeCommand.num}</td>
-				<td>${writeCommand.subject}</td>
+				<td><a href="contentView.do?num=${writeCommand.num}">${writeCommand.subject}</a></td>
 				<td>${writeCommand.userName}</td>
 				<td>${writeCommand.reg_date}</td>
-				
 			</tr>
 		</c:forEach>
 	</table>

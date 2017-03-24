@@ -15,7 +15,7 @@ import spring.command.ListCommand;
 import spring.command.WriteCommand;
 
 @Controller
-@RequestMapping("/update/writeForm.do")
+@RequestMapping("update/writeForm.do")
 public class writeController {
 
 	@Autowired

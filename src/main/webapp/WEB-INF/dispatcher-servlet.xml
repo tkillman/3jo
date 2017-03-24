@@ -15,6 +15,7 @@
 <!-- dao 객체 만들기 -->
 
 <bean name="writeDao" class="spring.DAO.WriteDao"></bean>
+<bean name="contentDao" class="spring.DAO.ContentDao"></bean>
 
 <!-- 뷰 리졸버 -->
 <bean id="viewResolver"	class="org.springframework.web.servlet.view.InternalResourceViewResolver">
