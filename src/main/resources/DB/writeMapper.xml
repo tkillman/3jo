@@ -5,6 +5,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="board">
 	<insert id="write" parameterType="spring.command.WriteCommand">
-		insert into project_board values (#{userName},#{password},#{subject},#{email},#{content}, default)
-	</insert>	
+		insert into project_board values (project_board_index.Nextval,#{userName},#{password},#{subject},#{email},#{content}, default)
+	</insert>
+	
+	<select id="getList" resultType="spring.command.WriteCommand">
+ 		select V.* from (select rownum as rno, num, userName, password, subject, email, content, reg_date from project_board order by num desc ) V where V.rno between 1 and 2
+	</select>
 </mapper>

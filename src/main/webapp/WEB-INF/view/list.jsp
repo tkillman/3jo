@@ -10,23 +10,21 @@
 </head>
 <body>
 
-글목록 (전체 글 : ${pageTotalNum}) <br>
-
-<table>
-<tr><td>번호</td><td>제목</td><td>작성자</td><td>작성일</td><td>조회</td></tr>
-
-<c:forEach var="write" items="writeList">
-<tr><td>${write.num}</td></tr><a href="list/writeList.do?num=${write.num}"> <td>${write.subject}</td></a><td>${write.writer}</td><td>${write.reg_date}</td><td>${write.reg_date}</td><td>${write.readCount}</td>
-</c:forEach>
-
-</table>
-
-<c:forEach var="pnum" begin=${startPage} end=${endPage}>
-<a href="list/writeList.do?pageNum=${pnum}">${pnum}</a>
-</c:forEach>
-
-
-
+	글목록 (전체 글 : ${writeList.pageTotalNum}) <br>
+	
+	<table>
+		<tr><td>번호</td><td>제목</td><td>작성자</td><td>작성일</td></tr>
+		
+		<c:forEach var="writeCommand" items="${writeList.writeCommands}">
+			<tr>
+				<td>${writeCommand.num}</td>
+				<td>${writeCommand.subject}</td>
+				<td>${writeCommand.userName}</td>
+				<td>${writeCommand.reg_date}</td>
+				
+			</tr>
+		</c:forEach>
+	</table>
 
 </body>
 </html>

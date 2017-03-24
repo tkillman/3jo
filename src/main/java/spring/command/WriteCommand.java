@@ -1,13 +1,34 @@
 package spring.command;
 
+import java.util.Date;
+
 public class WriteCommand {
 	
+	private int num;
 	private String userName;
 	private String password;
 	private String subject;
 	private String email;
+	private Date reg_date;
+	
 	private String content;
 	
+	
+	
+	
+	
+	public Date getReg_date() {
+		return reg_date;
+	}
+	public void setReg_date(Date reg_date) {
+		this.reg_date = reg_date;
+	}
+	public int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
+	}
 	public String getUserName() {
 		return userName;
 	}
